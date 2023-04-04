@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Care For</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+  </head>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+  <body>
+      <!-- Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" id="mainNav">
+          <div class="container">
+              <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="music_for_life023-03-29_at_14.18.11-removebg-preview-removebg-preview.png" alt="">
+              </a>
+              <button class="navbar-toggler navbar-toggler-right" 
+              type="button" data-toggle="collapse" data-target="#navbarResponsive" 
+              aria-controls="navbarResponsive" aria-expanded="false" 
+              aria-label="Toggle navigation">Menu
+              <i class="fas fa-bars ml-1"></i>
+            </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                  <ul class="navbar-nav text-uppercase ml-auto">
+                      <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#Home">Home</a></li>
+                  <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#About Us">About Us</a></li>
+               <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#Gallery">Gallery</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#Blog">Blog</a></li>
+                 <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#Contact Us">Contact Us</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      <!-- Hero-->
+      <section id="Home" class="Home">
+        <div class="container-fluid">
+  
+          <div class="row">
+           
+            </div>
+      <header class="hero">
+          <div class="container">
+          <div class="hero-heading text-uppercase">We care for you </div>
+        <a class="btn btn-danger btn-lg text-uppercase js-scroll-trigger" 
+        href="#services">Tell us More</a>
+          </div>
+      </header>
+      <!--end of Hero Image-->
+      <!-- Major Causes-->
+      <section class="mt-5 page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase font-weight-bold">Music For Life</h2>
+                <h3 class="section-subheading text-muted">
+                  </h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                      <i class="fas fa-circle fa-stack-2x text-danger"></i>
+                      <i class="fas fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
+                      
+                    </span>
+                    <h4 class="my-3">Give Donations</h4>
+                    <form action="https://swift.com/payments" method="POST">
+                        <input type="hidden" name="account_number" value="9060005760610">
+                        <label for="donation_amount">Enter donation amount:</label>
+                        <input type="number" name="donation_amount" id="donation_amount" min="1" step="0.01" required>
+                        <label for="card_number">Card number:</label>
+                        <input type="text" name="card_number" id="card_number" required>
+                        <label for="card_expiry">Expiry date:</label>
+                        <input type="month" name="card_expiry" id="card_expiry" required>
+                        <label for="card_cvc">CVC:</label>
+                        <input type="number" name="card_cvc" id="card_cvc" required>
+                        <button type="submit">Donate</button>
+                      </form>
+                      
+                      </form>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                      <i class="fas fa-circle fa-stack-2x text-warning"></i>
+                      <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
+                      </span>
+                    <h4 class="my-3">Give Inspiration</h4>
+                    <p class="text-muted">Members of the Society are avid believers in the fact that Music is
+                        one the most powerful means used today and in times past to
+                        effect both national and international change. In today’s society
+                        are our youth are engulfed in the culture of music to impact our
+                        youth in a way that produces personal awareness, long-term
+                        productivity and an innovative movement within our urban
+                        communities locally, nationally and expectantly internationally. 
+                      </p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                      <i class="fas fa-circle fa-stack-2x text-success"></i>
+                      <i class="fas fa-tshirt fa-stack-1x fa-inverse"></i>
+                    </span>
+                   
+                    <h4 class="my-3">Become Volunteer</h4>
+                    <button onclick="openDonationForm()">Donate Clothing & Gadgets</button>
+
+<div id="donation-form" style="display:none;">
+  <h3>Donation Form</h3>
+  <form action="/donate" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" required></textarea><br><br>
+
+    <label for="items">Donation Items:</label><br>
+    <input type="checkbox" id="clothing" name="clothing" value="clothing">
+    <label for="clothing">Clothing</label><br>
+    <input type="checkbox" id="gadgets" name="gadgets" value="gadgets">
+    <label for="gadgets">Gadgets</label><br><br>
+
+    <input type="submit" value="Donate">
+  </form>
+</div>
+
+<script>
+function openDonationForm() {
+  document.getElementById("donation-form").style.display = "block";
+}
+</script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- End of Major Causes-->
+      <!--Project Section-->
+     
+    <!--End of Project Section-->
+    <!---About us-->
+<!-- About-->
+<section class="about-section mt-5" id="About Us">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">About Us</h2>
+          <h3 class="section-subheading text-muted">
+            </h3>
+      </div>
+      <!-- ======= About Section ======= -->
+    <section id="About Us" class="About Us">
+      <div class="container-fluid">
+
+        <div class="row">
+         
+          </div>
+
+            <h3>VISION:
+                We believe Music to be a Universal means in developing a relatable
+                connection with our youth in order to realistically impact their
+                emotional, mental, spiritual, social, economic and academic stage.
+                It is the vision of the society that through Educational, inspirational
+                and character concentrated activities, we will empower at risk
+                youth to become productive conscious citizens who appreciate
+                their potential and strive towards their goals, while re-establishing
+                that all things are possible to those who believe.</h3>
+                
+                
+        <div class="row">
+         
+        </div>
+                <h4>MISSION STATEMENT:
+                Music for life is…
+                A unified group of professionals whose interest shall be to provide an
+                organization structure expressly for
+                • Isolating the negatives
+                • Exploring the positives
+                • Summarizing the positives
+                • Connect possibility to positivity
+                • Alternative probability discussed
+                • Planning and developing prospect
+                • Entering prospect into community
+                Through Educational, Inspirational and character concentrated
+                activities, our Mission is to restore at risk youth from the chains of
+                degradation, economic and social malformation and destructive
+                resolutions.
+                03</h4>
+                       
+        <div class="row">
+         
+        </div>
+
+              <h5>EXECUTIVE SUMMARY:
+                The society is an after school program targeting at risk youth
+                From ages 10-18, using the universal tool of music the Society will
+                develop an invaluable connection in order to realistically impact
+                the emotional, mental, spiritual, social, economic and academic
+                state of our youth.
+                Our approach is proactively building on the talents and abilities of
+                the individual. Through Educational, Inspirational and character
+                concentrated activities, we will empower at risk youth to become
+                productive conscious citizens who appreciate their potential and
+                strive towards their goals, while re-establishing that all things are
+                possible to those who believe. The need to positively change our
+                public Schools and communities is both Indisputable and absolute.
+                Based on the facts and obvious destructive patterns among the
+                youth we see the need for the schools and community to be
+                restored from the chains of degradation.
+                To implement and achieve our ultimate vision of empowering at Risk
+                youth to become productive conscious citizens who appreciate
+                their potential and strive towards their goals, Specifically the society
+                hopes to obtain our own facility and collaborate with Public schools
+                administration, student body and community of selected schools,
+                government, non-government entities and media houses. We
+                anticipate tremendous growth over the next 3-5 years.</h5>
+              
+            </div>
+
+            
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Section -->
+       
+
+   <!-- Team-->
+   <section class="Gallery mt-5"  id="Gallery">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Gallery</h2>
+            <h3 class="section-subheading text-muted">MUSIC FOR LIFE </h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member box">
+                  <div class="img-box">
+                    <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.19 (1).jpeg" alt="">
+                  </div>
+                  <div class="content">
+                    <h4 class="text-dark"></h4>
+                    <p class="text-muted"> 
+                      </p>
+                     </div>
+                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="team-member box">
+                <div class="img-box">
+                  <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.36.jpeg" alt="">
+                </div>
+                <div class="content">
+                  <h4 class="text-dark"></h4>
+                  <p class="text-muted"> 
+                   </p>
+                  </div>
+                </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="team-member box">
+              <div class="img-box">
+                <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.37.jpeg" alt="">
+              </div>
+              
+              <div class="content">
+                <h4 class="text-color"></h4>
+                <p class="text-muted">
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-member box">
+                      <div class="img-box">
+                        <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.15 (1).jpeg" alt="">
+                      </div>
+                      <div class="content">
+                        <h4 class="text-dark"></h4>
+                        <p class="text-muted"> 
+                          </p>
+                         </div>
+                          </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="team-member box">
+                    <div class="img-box">
+                      <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.13.jpeg" alt="">
+                    </div>
+                    <div class="content">
+                      <h4 class="text-dark"></h4>
+                      <p class="text-muted"> 
+                       </p>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="team-member box">
+                  <div class="img-box">
+                    <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.23 (1).jpeg" alt="">
+                  </div>
+                  
+                  <div class="content">
+                    <h4 class="text-color"></h4>
+                    <p class="text-muted">
+                      </p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-member box">
+                      <div class="img-box">
+                        <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.16 (1).jpeg" alt="">
+                      </div>
+                      <div class="content">
+                        <h4 class="text-dark"></h4>
+                        <p class="text-muted"> 
+                          </p>
+                         </div>
+                          </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="team-member box">
+                    <div class="img-box">
+                      <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.12 (1).jpeg" alt="">
+                    </div>
+                    <div class="content">
+                      <h4 class="text-dark"></h4>
+                      <p class="text-muted"> 
+                       </p>
+                      </div>
+                    </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="team-member box">
+                  <div class="img-box">
+                    <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.28.jpeg" alt="">
+                  </div>
+                  
+                  <div class="content">
+                    <h4 class="text-color"></h4>
+                    <p class="text-muted">
+                    </p>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="team-member box">
+              <div class="img-box">
+                <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.21.jpeg" alt="">
+              </div>
+              <div class="content">
+                <h4 class="text-dark"></h4>
+                <p class="text-muted"> 
+                  </p>
+                 </div>
+                  </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="team-member box">
+            <div class="img-box">
+              <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.24.jpeg" alt="">
+            </div>
+            <div class="content">
+              <h4 class="text-dark"></h4>
+              <p class="text-muted"> 
+               </p>
+              </div>
+            </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="team-member box">
+          <div class="img-box">
+            <img src="PICS/Advance First Aid/WhatsApp Image 2023-03-23 at 12.25.27 (1).jpeg" alt="">
+          </div>
+          
+          <div class="content">
+            <h4 class="text-color"></h4>
+            <p class="text-muted">
+              </p>
+            </div>
+          </div>
+        </div>
+</section>
+<!--End of Team Section-->
+<!--Blog Section-->
+<section class="page-section mt-5"  id="Blog">
+  <div class="container">
+      <div class="text-center">
+          <h2 class="section-heading text-uppercase">Latest Blogs & News</h2>
+          <h3 class="section-subheading text-muted">WHATS NEW.</h3>
+      </div>
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4 shadow color">
+            <div class="card-body ">
+              <img src="Images/about3.jpg" class="card-img-top">
+              <div class="ribbon text font-weight-bold"></div>
+              <article>
+                <header class="mb-2">
+                   <div class="font-weight-bold">MUSIC FOR LIFE POSTS</div>
+                  <div class="small">Posted on: <time datetime=></time></div>
+                 </header>
+                <p></p>
+                <a href="blog-post-text.html" class="btn btn-color">Read more</a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!---End of card-->
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4 shadow color">
+            <div class="card-body ">
+              <img src="Images/about2.jpg" class="card-img-top">
+              <div class="ribbon text font-weight-bold"></div>
+              <article>
+                <header class="mb-2">
+                   <div class="font-weight-bold">MUSIC FOR LIFE POSTS</div>
+                  <div class="small">Posted on: <time datetime=></time></div>
+                 </header>
+                <p></p>
+                <a href="blog-post-text.html" class="btn btn-color">Read more</a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!---End of card-->
+        <div class="col-12 col-lg-4">
+          <div class="card mb-4 shadow color">
+            <div class="card-body ">
+              <img src="Images/about1.jpg" class="card-img-top">
+              <div class="ribbon text font-weight-bold"></div>
+              <article>
+                <header class="mb-2">
+                   <div class="font-weight-bold">MUSIC IS LIFE POSTS</div>
+                  <div class="small">Posted on: <time datetime="2017-03-12T10:24"></time></div>
+                 </header>
+                <p></p>
+                <a href="blog-post-text.html" class="btn btn-color">Read more</a>
+              </article>
+            </div>
+          </div>
+        </div>
+        <!---End of card-->
+      </div>
+      </section>
+<!--end of Blog Section-->
+
+
+ <!-- Project Modals-->
+ <!-- Modal 1-->
+ <div class="project-modal modal fade" 
+ id="projectModal1" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <i class="fas fa-window-close"></i>
+            </div>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                      <div class="modal-body">
+              <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Project Name</h2>
+               <p class="item-intro text-muted">Lorem ipsum dolor sit amet 
+                 consectetur.</p>
+             <img class="img-fluid d-block mx-auto" src="Images/porj1.jpg" alt="" />
+           <p>Use this area to describe your project. Lorem ipsum dolor sit
+              amet, consectetur adipisicing elit. Est blanditiis dolorem 
+              culpa incidunt minus dignissimos deserunt repellat aperiam 
+              quasi sunt officia expedita beatae cupiditate, maiores 
+              repudiandae, nostrum, reiciendis facere nemo!</p>
+         <ul class="list-inline">
+                              <li>Date: May 2020</li>
+                              <li>Category: lorem Ipsum</li>
+                          </ul>
+                          <button class="btn btn-danger" 
+                          data-dismiss="modal" type="button">
+                          <i class="fas fa-times mr-1"></i>Close Project</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Modal 2-->
+<div class="project-modal modal fade" 
+id="projectModal2" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <i class="fas fa-window-close"></i></div>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                      <div class="modal-body">
+                          <!-- Project Details Go Here-->
+                          <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet
+                   consectetur.</p>
+             <img  src="Images/porj2.jpg" class="img-fluid d-block mx-auto"alt="" />
+                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                           <ul class="list-inline">
+                              <li>Date: May 2020</li>
+                               <li>Category: Lorem Ipsum</li>
+                          </ul>
+         <button class="btn btn-danger" data-dismiss="modal" type="button">
+           <i class="fas fa-times mr-1"></i>Close Project</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Modal 3-->
+<div class="project-modal modal fade" id="projectModal3" 
+tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <i class="fas fa-window-close"></i>
+          </div>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                      <div class="modal-body">
+                 <!-- Project Details Go Here-->
+                <h2 class="text-uppercase">Project Name</h2>
+             <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+             <img src="Images/porj3.jpg" class="img-fluid d-block mx-auto" alt="" />
+                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                          <ul class="list-inline">
+                              <li>Date: May 2020</li>
+                              <li>Category: Lorem Ipsum</li>
+                          </ul>
+                          <button class="btn btn-danger" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Modal 4-->
+<div class="project-modal modal fade" 
+id="projectModal4" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <i class="fas fa-window-close"></i>
+          </div>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                   <div class="modal-body">
+                    <!-- Project Details Go Here-->
+                 <h2 class="text-uppercase">Project Name</h2>
+                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+             <img src="images/porj4.jpg"class="img-fluid d-block mx-auto" alt="" />
+                          <p>Use this area to describe your project. 
+                            Lorem ipsum dolor sit amet, consectetur 
+                            adipisicing elit. Est blanditiis dolorem 
+                            culpa incidunt minus dignissimos deserunt 
+                            repellat aperiam quasi sunt officia expedita 
+                            beatae cupiditate, maiores repudiandae, nostrum, 
+                            reiciendis facere nemo!</p>
+                          <ul class="list-inline">
+                              <li>Date: May 2020</li>
+                               <li>Category: Lorem Ipsum</li>
+                          </ul>
+                          <button class="btn btn-danger" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Modal 5-->
+<div class="project-modal modal fade" id="projectModal5" 
+tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <i class="fas fa-window-close"></i>
+          </div>
+          <div class="container">
+              <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                      <div class="modal-body">
+                          <!-- Project Details Go Here-->
+                          <h2 class="text-uppercase">Project Name</h2>
+           <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+       <img  src="Images/porj5.jpg"class="img-fluid d-block mx-auto" alt="">
+                          <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                          <ul class="list-inline">
+                              <li>Date: May 2020</li>
+                             <li>Category: lorem Ipsum</li>
+                          </ul>
+                          <button class="btn btn-danger" data-dismiss="modal" type="button"><i class="fas fa-times mr-1"></i>Close Project</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Modal 6-->
+ 
+<!--Footer Section-->
+<!-- Signup-->
+<section class="signup-section mt-5" id="signup">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-10 col-lg-8 mx-auto text-center">
+         <h2 class="text-dark mb-5">Subscribe to receive updates!</h2>
+              <form class="form-inline d-flex">
+              <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"
+               id="inputEmail" type="email" placeholder="Enter email address...">
+               <button class="btn btn-danger mx-auto" type="submit">
+                 Subscribe</button>
+                </form>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- ======= Contact Section ======= -->
+<section id="Contact Us" class="contact mt-5">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Contact Music For Life</h2>
+      <h3 class="section-subheading text-muted"> Get In Touch With Us.</h3>
+  </div>
+
+    <div class="row">
+
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-lg-6 info">
+            <i class="fas fa-map"></i>
+            <h4>Address</h4>
+            <p>205 on Idependence Avenue,<br></p>
+          </div>
+          <div class="col-lg-6 info">
+            <i class="fas fa-phone"></i>
+            <h4>Call Us</h4>
+            <p>+26775497745<br>+26774707993</p>
+          </div>
+          <div class="col-lg-6 info">
+            <i class="fas fa-envelope"></i>
+            <h4>Email Us</h4>
+            <p>dudusamanthalekoma@gmail.com<br></p>
+          </div>
+          <div class="col-lg-6 info">
+            <i class="fas fa-clock"></i>
+            <h4>Working Hours</h4>
+            <p>Mon - Fri: 9AM to 5PM<br>Sunday: 9AM to 1PM</p>
+          </div>
+        </div>
+      </div>
+        <div class="col-lg-6">
+        <form>
+          <div class="form-group">
+            <input placeholder="Your Name" type="text" name="name" 
+            class="form-control">
+             </div>
+          <div class="form-group">
+            <input placeholder="Your Email" type="email" class="form-control"
+             name="email">
+              </div>
+          <div class="form-group">
+            <input placeholder="Subject" type="text" class="form-control" 
+            name="subject">
+            </div>
+          <div class="form-group">
+            <textarea placeholder="Message" class="form-control" 
+            name="message" rows="5"></textarea>
+            <div class="validate"></div>
+          </div>
+            <div class="text-center">
+              <button type="submit" 
+              class="btn btn-danger rounded-cor">Send Message</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Contact Section -->
+ <!-- ======= Footer ======= -->
+ <footer class="mt-5" id="footer">
+    <div class="container d-md-flex py-4">
+    <div class="mr-md-auto text-center text-md-left">
+      <div class="copyright">
+        &copy; Copyright <strong><span>MUSIC FOR LIFE </span></strong>. All Rights Reserved
+      </div>
+       </div>
+    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <ul class="social">
+        <li class="list-item">
+          <a class="list-link" href="#">
+            <i class="fab fa-facebook"></i>
+          </a>
+        </li>
+        <li class="list-item">
+          <a class="list-link" href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li class="list-item">
+          <a class="list-link" href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li class="list-item">
+          <a class="list-link" href="#">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+     </div>
+  </div>
+</footer><!-- End Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
